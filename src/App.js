@@ -1,10 +1,17 @@
 import logo from "./logo.svg";
 import "./App.css";
-
+import Navbar from "./components/Navbar";
+import Text from "./components/Text";
 function App() {
   return (
     <div className="App">
-      <h1 className="text-blue-500 bg-red-500">Hello world</h1>
+      <Navbar
+        option1="Home"
+        option2="About"
+        option3="Contact"
+        NavbarColor="rgba(158, 167, 242, 0.5)"
+      />
+      <Text/>
     </div>
   );
 }
