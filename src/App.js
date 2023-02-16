@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Text from "./components/Text";
+import Form from "./components/Form";
 function App() {
   return (
     <div className="App">
@@ -12,6 +13,7 @@ function App() {
         NavbarColor="rgba(158, 167, 242, 0.5)"
       />
       <Text/>
+      <Form />
     </div>
   );
 }

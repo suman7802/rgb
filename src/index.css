@@ -8,6 +8,9 @@
     @apply cursor-pointer font-bold hover:text-purple-500;
   }
   .button {
-    @apply bg-gray-600 text-white px-3 py-1 mx-2 mb-2;
+    @apply bg-gray-600 text-white px-3 py-1 mx-2 mb-2 rounded-md;
+  }
+  .input {
+    @apply text-center border-[1px] outline-none w-[50%] rounded-md my-[5px];
   }
 }

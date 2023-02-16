@@ -22,6 +22,15 @@ const Text = () => {
     setText(newText);
   };
 
+  const Copy = () => {
+    let copiedText = document.querySelector("#input").value;
+    navigator.clipboard.writeText(copiedText);
+  };
+  const RemoveExtraSpace = () => {
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
+  };
+
   return (
     <>
       <div className="flex flex-row p-2">
@@ -43,6 +52,12 @@ const Text = () => {
           </button>
           <button className="button" onClick={Clear}>
             Clear
+          </button>
+          <button className="button" onClick={Copy}>
+            copy Text
+          </button>
+          <button className="button" onClick={RemoveExtraSpace}>
+            Remove Extra Space
           </button>
         </div>
       </div>
