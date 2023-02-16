@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const Text = () => {
+const Text = (props) => {
   const [text, setText] = useState("");
 
   const HandleOnChange = (event) => {
@@ -10,6 +10,7 @@ const Text = () => {
   const UpperCase = () => {
     let newText = text.toUpperCase();
     setText(newText);
+    props.method("uppercase success", "green");
   };
 
   const LowerCase = () => {

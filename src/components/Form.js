@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export default function Form() {
+export default function Form({}) {
   const [btnText, setBtnText] = useState("Dark Mode");
   const [theme, setTheme] = useState({
     color: "black",
