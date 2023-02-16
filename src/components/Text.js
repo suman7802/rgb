@@ -17,6 +17,11 @@ const Text = () => {
     setText(newText);
   };
 
+  const Clear = () => {
+    let newText = "";
+    setText(newText);
+  };
+
   return (
     <>
       <div className="flex flex-row p-2">
@@ -36,6 +41,9 @@ const Text = () => {
           <button className="button" onClick={LowerCase}>
             LowerCase
           </button>
+          <button className="button" onClick={Clear}>
+            Clear
+          </button>
         </div>
       </div>
       <div className="monitor flex flex-row mx-2 text-left">
@@ -45,7 +53,8 @@ const Text = () => {
             {text.split(" ").length}words and {text.length}characters
           </p>
           <p>
-            Aprox {0.008 * text.split(" ").length} minutes time will take to read this{" "}
+            Aprox {0.008 * text.split(" ").length} minutes time will take to
+            read this{" "}
           </p>
         </div>
       </div>
