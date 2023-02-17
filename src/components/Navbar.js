@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {Link} from "react-router-dom";
 
 const Navbar = ({NavbarColor, options}) => {
   return (
@@ -27,7 +26,6 @@ const Navbar = ({NavbarColor, options}) => {
           placeholder="search"
           className="px-5 rounded-lg text-center outline-none "
         />
-        {/* <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /> */}
       </div>
     </div>
   );

@@ -81,12 +81,3 @@ export default function Form({}) {
     </>
   );
 }
-
-// const toggleText = () => {
-//   console.log("toggle text working");
-//   if (btnText === "Dark Mode") {
-//     setBtnText("Light Mode");
-//   } else {
-//     setBtnText("Dark Mode");
-//   }
-// };
