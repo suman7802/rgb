@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
-const Navbar = ({option1, option2, option3, NavbarColor}) => {
+const Navbar = ({NavbarColor, options}) => {
   return (
     <div
       style={{
@@ -9,9 +10,14 @@ const Navbar = ({option1, option2, option3, NavbarColor}) => {
       }}
       className="section section1 border-2 border-black flex justify-between px-5 py-3">
       <ul className="flex flex-row space-x-10 text-xl  ">
-        <li className="navOption ">{option1}</li>
-        <li className="navOption">{option2}</li>
-        <li className="navOption">{option3}</li>
+        {options.map((option, i) => {
+          return (
+            <li key={i} className="navOption ">
+              {" "}
+              <a href={`/${option.link}`}>{option.text}</a>
+            </li>
+          );
+        })}
       </ul>
       <div className="search flex flex-row">
         <input
@@ -30,7 +36,7 @@ Navbar.propTypes = {
   option1: PropTypes.string,
   option2: PropTypes.string,
   option3: PropTypes.string,
-  NavbarColor: PropTypes.string.isRequired
+  NavbarColor: PropTypes.string.isRequired,
 };
 Navbar.defaultProps = {
   option1: "Home",

@@ -10,35 +10,44 @@ const Text = (props) => {
   const UpperCase = () => {
     let newText = text.toUpperCase();
     setText(newText);
-    props.method("uppercase success", "green");
+    props.method("Uppercase success", "green");
+    document.title = "Laude kya uppar kar rahahai..";
   };
 
   const LowerCase = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.method("Lower success", "green");
+    document.title = "Niche kr Aakh";
   };
 
   const Clear = () => {
     let newText = "";
     setText(newText);
+    props.method("Text clear", "green");
+    document.title = "Sab khatam";
   };
 
   const Copy = () => {
     let copiedText = document.querySelector("#input").value;
     navigator.clipboard.writeText(copiedText);
+    props.method("Text copied success", "green");
+    document.title = "Meli Natal Talta hai";
   };
   const RemoveExtraSpace = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.method("Unwanted spaces removed", "green");
+    document.title = "Aare kaha gaya";
   };
 
   return (
     <>
-      <div className="flex flex-row p-2">
+      <div className="flex flex-row p-2 pt-9">
         <textarea
           value={text}
           onChange={HandleOnChange}
-          className="border-[1px] border-black p-2"
+          className="border-[1px] border-black p-2 "
           name="input"
           id="input"
           placeholder="TextManipulation"

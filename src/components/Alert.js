@@ -2,12 +2,11 @@ import React from "react";
 
 function Alert(props) {
   return (
-   
     <>
       <div
         style={{backgroundColor: props.alert.color}}
-        className="h-[2rem] w-[100vw]">
-        I am <strong>Alert!</strong> {props.alert.message}
+        className="h-[2rem] w-[100vw] absolute">
+        {props.alert.message}
       </div>
     </>
   );

@@ -7,6 +7,9 @@ export default function Form({}) {
     backgroundColor: "rgb(245, 245, 239)",
     borderColor: "black",
   });
+  const Title = () => {
+    document.title = "Login page";
+  };
 
   const toggleMode = () => {
     if (theme.color === "black") {
@@ -29,6 +32,7 @@ export default function Form({}) {
   return (
     <>
       <div style={theme} className="flex flex-col items-center  h-[100vh]">
+        <Title />
         <form action="/">
           <div
             style={theme}
