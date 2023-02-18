@@ -7,10 +7,10 @@ import Alert1 from "./components/Alert";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import PageNotFound from "./components/404";
 
-function App(props) {
+function App() {
+
   const [Alert, setAlert] = useState(null);
   const showAlert = (message, color) => {
-    console.log(message, color);
     setAlert({
       message: message,
       color: color,
@@ -46,7 +46,6 @@ function App(props) {
     },
     {
       path: "login",
-
       element: (
         <div>
           <Form />
@@ -58,8 +57,8 @@ function App(props) {
 
   return (
     <div className="App">
-      {Alert && <Alert1 alert={Alert} />}
       <Navbar options={options} NavbarColor="rgba(158, 167, 242, 0.5)" />
+      {Alert && <Alert1 alert={Alert} />}
       <RouterProvider router={router} />
     </div>
   );

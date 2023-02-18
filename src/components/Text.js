@@ -11,7 +11,7 @@ const Text = (props) => {
     let newText = text.toUpperCase();
     setText(newText);
     props.method("Uppercase success", "green");
-    document.title = "Laude kya uppar kar rahahai..";
+    document.title = "Laude kya uppar kar rahahai";
   };
 
   const LowerCase = () => {
@@ -32,7 +32,7 @@ const Text = (props) => {
     let copiedText = document.querySelector("#input").value;
     navigator.clipboard.writeText(copiedText);
     props.method("Text copied success", "green");
-    document.title = "Meli Natal Talta hai";
+    document.title = "Tale Meli Natal Talta hai";
   };
   const RemoveExtraSpace = () => {
     let newText = text.split(/[ ]+/);
@@ -75,11 +75,12 @@ const Text = (props) => {
         <div>
           <p className="text-xl font-bold">Your Text Summary</p>
           <p>
-            {text.split(" ").length}words and {text.length}characters
+            {text.split(" ").filter((e) => e.length !== 0).length} words and{" "}
+            {text.length} characters
           </p>
           <p>
-            Aprox {0.008 * text.split(" ").length} minutes time will take to
-            read this{" "}
+            Aprox {0.008 * text.split(" ").filter((e) => e.length != 0).length}{" "}
+            minutes time will take to read this{" "}
           </p>
         </div>
       </div>
